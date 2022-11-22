@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #fff;
 }
 
 .brand {
@@ -9,8 +9,37 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
+h2,
+p {
+    text-align: center;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.purple {
+    color: purple;
+}
+
+.pink {
+    color: pink;
 }
 
 .thin {
@@ -26,7 +55,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #9ba6a5;
 }
 
 .card {

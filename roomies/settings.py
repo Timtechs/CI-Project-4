@@ -28,21 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-# if this key exists in your env.py, use the sqlite3 DB
-if 'TESTING' in os.environ:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-# otherwise, connect to Postgres DB
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+DEBUG = True
 
 ALLOWED_HOSTS = ['roomies-timtech.herokuapp.com', 'localhost']
 
@@ -72,6 +58,7 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-info',
