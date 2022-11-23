@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from booker.views import add_room
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("booker.urls"), name="booker-urls"),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
-    path("add", add_room, name="add"),
 ]
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.DEFAULT_FILE_STORAGE)

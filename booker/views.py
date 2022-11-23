@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.core.files.storage import FileSystemStorage
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, ImageForm
 
 
 class PostList(generic.ListView):
@@ -79,12 +80,15 @@ class PostLike(View):
             reverse('roomies/room_detail', args=[slug]))
 
 
-def add_room(request):
+def image_upload_view(request):
+    """Process images uploaded by users"""
     if request.method == 'POST':
-        image = request.POST.get('room_image')
-        title = request.POST.get('title')
-        excerpt = request.POST.get('excerpt')
-        Post.objects.create(image=image, title=title, excerpt=excerpt)
-
-        return HttpResponseRedirect(PostList)
-    return render(request, 'roomies/add_room.html')
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            img_obj = form.instance
+            return render(
+                request, 'upload/', {'form': form, 'img_obj': img_obj})
+    else:
+        form = ImageForm()
+    return render(request, 'index.html', {'form': form})
