@@ -55,7 +55,7 @@ p {
 }
 
 .main-bg {
-    background-color: #9ba6a5;
+    background-color: #bbe9db;
 }
 
 .card {
@@ -168,4 +168,8 @@ p {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+.footer-link {
+    color: white;
 }

@@ -2,6 +2,17 @@
 
 {% block content %}
 
+<div class="container">
+    <div class="col-md-12">
+        <div class="brand">
+            <h2>Need somewhere to stay for a Night? Week? Month? Year?</h2>
+            <a href="{% url 'account_signup' %}" class="post-link">
+            <p>Signup to be able to become a Roomie</p>
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid">
     <div class="row">
 
@@ -23,7 +34,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                            <a href="{% url 'room_detail' post.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
@@ -55,5 +66,9 @@
         </ul>
     </nav>
     {% endif %}
+</div>
+
+<div>
+    <button><a href="add">Rent out your Room</a></button>
 </div>
 {%endblock%}
