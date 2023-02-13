@@ -26,9 +26,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light dark-bg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span class="blue">R</span><span
-                        class="red">o</span><span class="green">o</span><span class="yellow">m</span><span
-                        class="orange">i</span><span class="purple">e</span><span class="pink">s</span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span class="red-text">Roomies</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,6 +40,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    <div>
+                        <button><a href="upload">Rent out your Room</a></button>
+                    </div>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
