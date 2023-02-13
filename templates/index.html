@@ -68,7 +68,10 @@
     {% endif %}
 </div>
 
+{% if user.is_authenticated %}
 <div>
-    <button><a href="upload">Rent out your Room</a></button>
+    <button class="btn-signup"><a class="link-color" href="upload">Rent out your Room</a></button>
 </div>
+{% endif %}
+
 {%endblock%}

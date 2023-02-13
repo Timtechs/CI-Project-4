@@ -51,7 +51,7 @@ p {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #9ca9b9;
 }
 
 .main-bg {
@@ -113,6 +113,10 @@ p {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
+}
+
+.link-color {
+    color: black;
 }
 
 .post-link {
