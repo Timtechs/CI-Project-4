@@ -13,10 +13,3 @@ class ImageForm(forms.ModelForm):
     class Meta:
         model = Image
         fields = ('title', 'image')
-
-
-class RoomForm(forms.ModelForm):
-    """Form for the upload request"""
-    class Meta:
-        model = Room
-        fields = ('body', 'image')

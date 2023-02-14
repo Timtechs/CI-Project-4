@@ -26,7 +26,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dxp07pmr8/image/upload/v1669108749/house-g0cd95ad0a_1280_s4t3en.jpg">
+                                    src="https://res.cloudinary.com/dxp07pmr8/image/upload/v1676362105/house-163526_1280_wuobb8.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -67,14 +67,12 @@
     </nav>
     {% endif %}
 </div>
-<<<<<<< HEAD
 
-{% if user.is_authenticated %}
-<div>
-    <button class="btn-signup"><a class="link-color" href="upload">Rent out your Room</a></button>
+<div class="row">
+    <h2>Contact to start renting out your room</h2>
+    <div class="text-center">
+        <h3>Email: Roomies@roomies.com</h3>
+    </div>
 </div>
-{% endif %}
 
-=======
->>>>>>> d50ebf094f3f043ec814faeeba0ca92d2172fe18
 {%endblock%}

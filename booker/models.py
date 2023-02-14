@@ -53,14 +53,3 @@ class Image(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class Room(models.Model):
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
-    title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images')
-
-    def __str__(self):
-        return self.title
