@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'booker',
+    'star_ratings',
 ]
 
 SITE_ID = 1
@@ -160,3 +161,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Star rating system
+STAR_RATINGS_RERATE = True
+STAR_RATINGS_RERATE_SAME_DELETE = True
